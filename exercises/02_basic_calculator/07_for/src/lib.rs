@@ -1,7 +1,37 @@
 // Rewrite the factorial function using a `for` loop.
-pub fn factorial(n: u32) -> u32 {
-    todo!()
+pub fn factorial(mut n: u32) -> u32 {
+
+    let mut num: u32 = 1; 
+
+ /*   let mut sum = 0;
+    for i in 1..=5 {
+        sum += i;
 }
+*/
+    for i in 1..=n{
+        num *=n;
+        println!("{num}");
+
+        n -= 1; 
+    }
+
+    num
+
+}
+
+
+/*let mut num: u32 = 1;  // Start with 1 since 0! = 1
+    
+while n > 0 {
+    num *= n;  // Multiply num by n
+    n -= 1;    // Decrease n
+}
+
+num  // Return the computed factorial
+}
+*/
+
+
 
 #[cfg(test)]
 mod tests {

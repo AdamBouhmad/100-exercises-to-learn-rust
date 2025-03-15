@@ -10,6 +10,28 @@
 //
 // Use only what you learned! No loops yet, so you'll have to use recursion!
 
+
+
+fn factorial(n: u32) -> u32 {
+
+    // a factorial is the product of all positive integers up to a given number. 
+    // It's represented by the number followed by an exclamation point, such as 7!
+    // !5 = 120 
+    // 5 * 4 
+
+let mut num: u32 = 0; 
+    if n == 0 {
+        1  
+    } else { 
+        num = (n * factorial(n - 1));  // Recursive case: n * (n-1)!
+        println!("{}", num);
+        return num;
+    }
+}
+
+// basically what I need to do is have factorial_product 
+
+
 #[cfg(test)]
 mod tests {
     use crate::factorial;
