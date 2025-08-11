@@ -1,12 +1,13 @@
 mod ticket {
-    struct Ticket {
-        title: String,
-        description: String,
-        status: String,
+    pub struct Ticket {
+        pub title: String,
+        pub description: String,
+        pub status: String,
     }
+use crate::*;
 
     impl Ticket {
-        fn new(title: String, description: String, status: String) -> Ticket {
+        pub fn new(title: String, description: String, status: String) -> Ticket {
             if title.is_empty() {
                 panic!("Title cannot be empty");
             }
